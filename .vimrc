@@ -24,6 +24,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'The-NERD-Commenter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -97,3 +98,4 @@ let g:javascript_conceal_static         = "•"
 let g:javascript_conceal_super          = "Ω"
 let g:javascript_conceal_arrow_function = "⇒"
 
+let mapleader=","
