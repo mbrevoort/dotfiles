@@ -25,6 +25,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Raimondi/delimitMate'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'The-NERD-Commenter'
+Plugin 'easymotion/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -83,8 +84,8 @@ augroup mydelimitMate
 augroup END
 
 " JavaScript
-set conceallevel=1
-set concealcursor=nvic
+" set conceallevel=1
+" set concealcursor=nvic
 
 " JavaScript thanks to pangloss/vim-javascript
 let g:javascript_conceal_function       = "ƒ"
