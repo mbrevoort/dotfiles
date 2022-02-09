@@ -1,8 +1,6 @@
 
-# Is this a gitpod environment?
-if [ -z "$GITPOD_WORKSPACE_URL"]; then
-    alias gitpod='/usr/bin/gp'
-fi
+# Remap gp to gitpod, I want to use gp for 'git push'
+alias gitpod='/usr/bin/gp'
 
 alias gaa='git add --all'
 alias gcmsg='git commit -m'
