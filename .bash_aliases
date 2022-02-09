@@ -1,7 +1,7 @@
 
 # Is this a gitpod environment?
 if [ -z "$GITPOD_WORKSPACE_URL"]; then
-    alias gitpod='gp'
+    alias gitpod='/usr/bin/gp'
 fi
 
 alias gaa='git add --all'
