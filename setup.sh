@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+set -ex
 
 echo "Setting up dotfiles"
 
@@ -14,3 +14,16 @@ if [[ ! -d "~/.oh-my-zsh" ]]; then
     
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
+
+# Install spaceship
+# https://github.com/spaceship-prompt/spaceship-prompt
+ZSH_CUSTOM="/home/gitpod/.oh-my-zsh/custom"
+git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+# Install auto-jump
+temp_dir="$(mktemp -d)"
+git clone git://github.com/wting/autojump.git --depth=1 "$temp_dir"
+pushd "$temp_dir"
+  ./install.py
+popd
