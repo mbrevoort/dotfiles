@@ -21,7 +21,14 @@ ZSH_CUSTOM="/home/gitpod/.oh-my-zsh/custom"
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
-# copy dotfiles over to home
-cp .bashrc ~/.bashrc
-cp .bash_aliases ~/.bash_aliases
-cp .zshrc ~/.zshrc
+
+
+
+if [[ -d "/home/gitpod/.dotfiles" ]]; then
+    # In gitpod, dotfiles are stored in this directory
+    pushd "/home/gitpod/.dotfiles"
+        mv .bashrc ~/.bashrc
+        mv .bash_aliases ~/.bash_aliases
+        mv .zshrc ~/.zshrc
+    popd
+fi
