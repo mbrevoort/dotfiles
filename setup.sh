@@ -27,8 +27,6 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 if [[ -d "/home/gitpod/.dotfiles" ]]; then
     # In gitpod, dotfiles are stored in this directory
     pushd "/home/gitpod/.dotfiles"
-        mv .bashrc ~/.bashrc
-        mv .bash_aliases ~/.bash_aliases
         mv .zshrc ~/.zshrc
     popd
 fi
