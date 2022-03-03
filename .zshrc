@@ -104,3 +104,4 @@ source $ZSH/oh-my-zsh.sh
 [ -f /opt/homebrew/etc/profile.d/autojump.sh ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 alias code='code-insiders'
+alias k=kubectl
