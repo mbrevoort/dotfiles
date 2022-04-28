@@ -30,3 +30,5 @@ if [[ -d "/home/gitpod/.dotfiles" ]]; then
         mv .zshrc ~/.zshrc
     popd
 fi
+
+export SHELL=zsh
