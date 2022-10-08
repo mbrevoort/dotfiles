@@ -105,5 +105,3 @@ source $ZSH/oh-my-zsh.sh
 
 alias code='code-insiders'
 alias k=kubectl
-
-export GIT_EDITOR=vim
